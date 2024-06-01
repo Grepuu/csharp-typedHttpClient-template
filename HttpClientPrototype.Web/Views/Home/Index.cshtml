@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">
+        Api test
+    </h1>
+    <hr/>
+    <h3>
+        Primitive method (HttpClient created by hand):
+    </h3>
+    <p>
+        <a class="btn btn-lg btn-light shadow" 
+           asp-controller="Primitive" asp-action="Index">Get todo list</a>
+        <a class="btn btn-lg btn-light shadow" 
+           asp-controller="Primitive" asp-action="One" asp-route-id="13">Get one todo(id: 13)</a>
+    </p>
+    <hr/>
+    <h3>
+        Factory method (HttpClient instances managed by factory):
+    </h3>
+    <p>
+        <a class="btn btn-lg btn-light shadow" 
+           asp-controller="Factory" asp-action="Index">Get todo list</a>
+        <a class="btn btn-lg btn-light shadow" 
+           asp-controller="Factory" asp-action="One" asp-route-id="13">Get one todo(id: 13)</a>
+    </p>
+    <hr/>
+    <h3>
+        Typed clients (HttpClient instances managed by factory and defined in startup):
+    </h3>
+    <p>
+        <a class="btn btn-lg btn-light shadow" 
+           asp-controller="Typed" asp-action="Index">Get todo list</a>
+        <a class="btn btn-lg btn-light shadow" 
+           asp-controller="Typed" asp-action="One" asp-route-id="13">Get one todo(id: 13)</a>
+    </p>
+</div>
